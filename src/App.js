@@ -1,7 +1,7 @@
 import './App.css';
 import AddUser from "./Components/Users/AddUser";
 import ListUsers from "./Components/Users/ListUsers";
-import {useState} from "react";
+import React, {useState} from "react";
 
 const USERS = [];
 
@@ -13,8 +13,8 @@ function App() {
         setUsers(usersData);
     }
 
-    return (<div><AddUser onAddUser={addUserHandler}/>
-        <ListUsers users={users}/></div>);
+    return (<React.Fragment><AddUser onAddUser={addUserHandler}/>
+        <ListUsers users={users}/></React.Fragment>);
 }
 
 export default App;
