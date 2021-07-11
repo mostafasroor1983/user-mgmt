@@ -14,7 +14,7 @@ const AddUser = props => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        if (username.trim().length === 0 || age.trim().length === 0) {
+        if (username.trim().length === 0 || age.length === 0) {
             setIsValid(false);
             serErrorTitle("Required fields");
             setErrorMessage("Fields age and username are required");
